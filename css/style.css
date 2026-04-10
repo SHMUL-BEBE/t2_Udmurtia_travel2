@@ -1,0 +1,2051 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding-top: 100px;
+
+}
+
+:root {
+    /*Белый*/
+    --white: #FFFFFF;
+    /*Чёрный*/
+    --black: #000000;
+    /*Розовый*/
+    --pink: #FF3495;
+    /* Зелёный */
+    --green: #A7FC00;
+    /* Голубой */
+    --blue: #00BFFF;
+
+    /* Базовые размеры шрифтов */
+    --fs-h1: 40px;
+    --fs-h2: 28px;
+    --fs-h3: 24px;
+    --fs-body: 14px;
+    --fs-small: 12px;
+}
+
+@font-face {
+    font-family: ExtraBold;
+    src: url('../fonts/T2HalvarBreit-ExtraBold.ttf')
+}
+
+@font-face {
+    font-family: ExtraBoldMidGap;
+    src: url('../fonts/T2HalvarStencilBreit-ExtraBoldMidGap.ttf')
+}
+
+@font-face {
+    font-family: Medium;
+    src: url('../fonts/t2-Rooftop-Medium.otf')
+}
+
+@font-face {
+    font-family: Regular;
+    src: url('../fonts/t2-Rooftop-Regular.otf')
+}
+
+/*ШАПКА*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.title {
+    font-size: var(--fs-h1);
+    color: var(--white);
+    font-family: ExtraBoldMidGap;
+    white-space: nowrap;
+}
+
+.pink {
+    color: var(--pink);
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    font-family: Regular;
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    font-size: var(--fs-body);
+}
+
+li a:hover {
+    color: var(--pink);
+}
+
+/*СОДЕРЖАНИЕ*/
+/*ФИЛЬТР*/
+.block1 {
+    font-family: Medium;
+    position: relative;
+}
+
+.pattern {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.block1_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.name1,
+.text1 {
+    color: var(--white);
+    text-align: center;
+}
+
+.name1 {
+    font-size: var(--fs-h2);
+    margin-top: 62px;
+}
+
+.text1 {
+    font-size: var(--fs-body);
+    font-family: Regular;
+    margin-top: 14px;
+}
+
+.filter {
+    margin-top: 86px;
+    width: 100%;
+    max-width: 1683px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.filter-form {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(auto, 200px);
+    align-items: flex-end;
+    gap: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px 30px;
+    overflow-x: auto;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 120px;
+}
+
+.filter-group label {
+    font-size: var(--fs-body);
+    color: var(--black);
+    white-space: nowrap;
+}
+
+.filter-input,
+.filter-select {
+    font-size: var(--fs-body);
+    padding: 10px;
+    cursor: pointer;
+    border: 1.8px solid var(--black);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-color: var(--pink);
+    box-shadow: 0 0 0 2px rgba(255, 52, 149, 0.2);
+}
+
+.btn1 {
+    padding: 12px 66px;
+    background-color: var(--black);
+    border-radius: 5px;
+    color: var(--white);
+    border: none;
+    font-family: Medium;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: var(--fs-body);
+}
+
+.btn1:hover {
+    background-color: var(--pink);
+    transform: translateY(-2px);
+}
+
+/*ПРЕИМУЩЕСТВА*/
+.block2 {
+    margin-top: 140px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.name2 {
+    font-family: ExtraBold;
+    text-align: center;
+    font-size: var(--fs-h3);
+    color: var(--black);
+}
+
+.block2_1 {
+    margin-top: 34px;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.prime {
+    border-radius: 5px;
+    border: 2px solid var(--black);
+    padding: 33px;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    background-color: var(--white);
+}
+
+.prime:hover {
+    animation: miniExplode 1.5s ease;
+    border: 2px solid var(--pink);
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.3) 0%, rgba(255, 192, 203, 0) 70%);
+}
+
+.name3 {
+    font-family: Medium;
+    font-weight: bold;
+    font-size: calc(var(--fs-body) + 2px);
+}
+
+.text3 {
+    font-family: Regular;
+    margin-top: 11px;
+    font-size: var(--fs-small);
+}
+
+/* НАШИ ЭКСПЕДИЦИИ */
+.block3 {
+    margin-top: 70px;
+    padding: 24px;
+}
+
+.section-title {
+    font-family: ExtraBold;
+    text-align: center;
+    font-size: var(--fs-h3);
+    color: var(--black);
+}
+
+.destinations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.floating-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-card:hover {
+    transform: translateY(-10px);
+}
+
+.floating-card>img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.content h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--black);
+    font-family: Medium;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: var(--black);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-family: Regular;
+    opacity: 0.6;
+}
+
+/* ????? */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 15px;
+}
+
+.rating {
+    font-size: 1rem;
+    color: var(--black);
+    font-family: Medium;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+.price small {
+    font-size: 0.8rem;
+    color: var(--black);
+    opacity: 0.6;
+}
+
+/* Кнопки */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-book {
+    background: var(--blue);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: Regular;
+}
+
+.btn-map {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stars {
+    color: #f1c40f;
+}
+
+
+@keyframes miniExplode {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.2);
+        box-shadow: 0 0 30px var(--pink);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ВИДЕО */
+.block4 {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    height: auto;
+    background-color: var(--pink);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 300px;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* --- БЛОК ГИДЫ --- */
+
+
+.gids {
+    margin: 104px 0 0px 0;
+}
+
+.name4 {
+    font-family: ExtraBold;
+    font-size: var(--fs-h1);
+    text-align: center;
+}
+
+.block_gid {
+    margin-top: 104px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.gid1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    width: 250px;
+    height: auto;
+    /* Автоматическая высота под контент */
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 4px 4px 30px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    cursor: pointer;
+    transition: transform 0.7s var(--smooth-curve), background 0.7s var(--smooth-curve), box-shadow 0.7s var(--smooth-curve);
+}
+
+.gid1:hover {
+    transform: translateY(-15px);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(255, 52, 149, 0.2);
+    background-image: linear-gradient(white, white),
+        linear-gradient(45deg, var(--pink), var(--pink-light), var(--pink), #fff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGradientMove 3s ease infinite;
+}
+
+
+
+/* Модальное окно для почты */
+.subscribe-message {
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+.subscribe-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.subscribe-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Модальное окно с вашими цветами */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-family: Regular;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--pink);
+}
+
+.modal-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.modal-text {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.modal-btn {
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.modal-btn:hover {
+    background-color: var(--pink);
+}
+
+
+
+/* Стили для слайдера в балуне */
+.balloon-slider-container {
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.balloon-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.balloon-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.balloon-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.balloon-slide img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.slider-prev {
+    left: 5px;
+}
+
+.slider-next {
+    right: 5px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.slider-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider-dot.active {
+    background: white;
+}
+
+
+
+
+
+@keyframes borderGradientMove {
+    0% {
+        background-position: 0% 50%, 0% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%, 0% 50%;
+    }
+}
+
+.gid1 img {
+    width: 120px;
+    /* Увеличил аватарки */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.7s var(--smooth-curve);
+}
+
+.gid_name {
+    margin: 25px 0 5px 0;
+    font-family: Medium;
+    font-size: 24px;
+    text-align: center;
+}
+
+.gid_prof {
+    margin: 0;
+    font-family: Regular;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.separator {
+    width: 95%;
+    height: 5px;
+    border-radius: 25px;
+    background: var(--pink);
+    margin: 162px auto;
+}
+
+/* --- БЛОК РЕКЛАМА --- */
+.reklama {
+    display: flex;
+    gap: 137px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.reklama1 {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+    transition: background 0.8s var(--smooth-curve);
+    overflow: hidden;
+}
+
+
+.reklama1:hover {
+    background: rgba(0, 0, 0, 0.09);
+}
+
+.rek_title {
+    margin: 30px 38px 0 38px;
+    font-family: Medium;
+    font-size: var(--fs-h2);
+    line-height: 1.1;
+}
+
+.rek_text {
+    margin: 15px 38px 0 38px;
+    font-family: Regular;
+    font-size: var(--fs-h3);
+}
+
+.forma_email form {
+    margin: 25px 38px 0 38px;
+    display: flex;
+    gap: 10px;
+}
+
+.forma_email input {
+    flex: 1;
+    padding: 15px 20px;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Regular;
+    font-size: var(--fs-small);
+    outline: none;
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    background: var(--pink);
+    border-radius: 10px;
+    font-family: Medium;
+    font-size: var(--fs-small);
+    color: var(--white);
+    transition: transform 0.15s ease-out;
+}
+
+.button:active {
+    transform: scale(0.93);
+}
+
+.small_text {
+    margin: 20px 38px;
+    font-family: Regular;
+    font-size: var(--fs-small);
+    color: var(--black);
+    opacity: 0.6;
+    line-height: 1.4;
+}
+
+.rek_ssilki {
+    margin: 30px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rek_block {
+    cursor: pointer;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 27%;
+    transition: background 0.4s ease;
+}
+
+.rek_block img {
+    width: 100%;
+    pointer-events: none;
+}
+
+.reklama1>img {
+    width: 100%;
+    display: block;
+}
+
+/* Фото Ижевска внизу блока */
+
+/* --- БЛОК МАГАЗИН --- */
+.shop {
+    margin: 104px 0 30px 0;
+}
+
+.block_shop {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.shop1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 4px 4px 30px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: background 0.5s var(--smooth-curve);
+}
+
+.shop1:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.shop1 img {
+    width: 80%;
+    background: #f4f4f4;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.tovar,
+.price {
+    font-family: Regular;
+    font-size: var(--fs-h3);
+    text-align: center;
+    margin: 5px 0;
+}
+
+.button_shop {
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    background: var(--black);
+    border-radius: 10px;
+    font-family: Medium;
+    font-size: var(--fs-h3);
+    color: var(--white);
+    transition: transform 0.15s ease-out;
+}
+
+.button_shop:active {
+    transform: scale(0.93);
+}
+
+#map-container {
+    margin-top: 40px;
+    padding: 70px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-title {
+    font-family: ExtraBold;
+    font-size: var(--fs-h1);
+    text-align: center;
+
+}
+
+.floating-card {
+    transition: all 0.3s ease;
+}
+
+.floating-card[style*="display: none"] {
+    display: none !important;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #999;
+}
+
+.card-image-wrapper {
+    position: relative;
+}
+
+.map-marker-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-marker-btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.custom-balloon {
+    position: absolute;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    z-index: 10000;
+    display: none;
+    overflow: hidden;
+}
+
+/* Стрелка внизу балуна - теперь тоже скругленная */
+.custom-balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+/* Дополнительно: скругляем картинку сверху */
+.custom-balloon img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    /* ← скругление картинки */
+}
+
+.custom-balloon .balloon-content {
+    padding: 15px;
+}
+
+.custom-balloon h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.custom-balloon .balloon-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.custom-balloon .balloon-price {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.custom-balloon .balloon-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    /* ← белый крестик, чтобы был виден на картинке */
+    background: rgba(0, 0, 0, 0.5);
+    /* ← полупрозрачный фон */
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /* ← круглый крестик */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.custom-balloon .balloon-close:hover {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Слайдер в модальном окне */
+.modal-slider-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 20px 20px 0 0;
+}
+
+.modal-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: Regular;
+}
+
+.modal-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modal-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопки навигации */
+.modal-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.modal-slider-prev {
+    left: 15px;
+}
+
+.modal-slider-next {
+    right: 15px;
+}
+
+/* Точки навигации */
+.modal-slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.modal-slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-slider-dot.active {
+    background: #c72a2a;
+    width: 24px;
+    border-radius: 4px;
+}
+
+.modal-slider-dot:hover {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Информация в модалке */
+.modal-info {
+    padding: 25px;
+}
+
+.modal-info h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+}
+
+.modal-rating {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-rating .star {
+    color: #ff9800;
+    font-size: 18px;
+}
+
+.modal-rating .star.filled {
+    color: #ff9800;
+}
+
+.modal-rating .star.half {
+    color: #ff9800;
+    position: relative;
+}
+
+.modal-rating .reviews {
+    color: #666;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.modal-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-details {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.modal-details-row {
+    display: flex;
+    margin-bottom: 8px;
+    gap:40px;
+}
+
+.modal-details-label {
+    color: var(--blue) !important;
+    font-weight: 600;
+    width: 100px;
+    flex-shrink: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.modal-details-value {
+    color: #555;
+    font-size: 14px;
+    text-align: right;
+}
+
+.modal-price {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.modal-price small {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888;
+}
+
+.btn-book-start {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+    background-color: var(--blue) !important;
+}
+
+.close-btn {
+    width: 100%;
+    padding: 12px;
+    background: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.close-btn:hover {
+    background: #e0e0e0;
+}
+
+@media (min-width: 770px) {
+    .rek2 {
+        margin-top: 0px;
+    }
+
+    .rek1 {
+        margin-top: 50px;
+    }
+
+    .reklama1 {
+        height: 600px;
+    }
+}
+
+/* --- АДАПТИВ 768px --- */
+@media (max-width: 768px) {
+    :root {
+        --fs-h1: 32px;
+        --fs-h2: 22px;
+        --fs-h3: 20px;
+        --fs-body: 13px;
+        --fs-small: 11px;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    header {
+        flex-direction: row;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .title {
+        white-space: normal;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    ul {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    li a {
+        font-size: 12px;
+    }
+
+    .pattern {
+        min-height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .name1 {
+        margin-top: 100px;
+        padding: 0 15px;
+        font-size: 22px;
+    }
+
+    .text1 {
+        padding: 0 15px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .filter {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+
+    .filter-form {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        overflow-x: visible;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .filter-group {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .filter-group label {
+        white-space: normal;
+    }
+
+    .btn1 {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    .block2 {
+        margin-top: 600px;
+        padding: 0 15px;
+    }
+
+    .block2_1 {
+        gap: 20px;
+    }
+
+    .prime {
+        min-width: 220px;
+        padding: 25px;
+    }
+
+    .block_gid {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    .gid1 {
+        width: auto;
+        padding: 40px 20px;
+    }
+
+    .gid1 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .reklama {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 40px;
+    }
+
+    .reklama1 {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .rek_title {
+        font-size: 28px;
+        margin: 30px 30px 0 30px;
+    }
+
+    .rek_text {
+        font-size: 18px;
+        margin: 10px 30px 0 30px;
+    }
+
+    .block_shop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 40px;
+    }
+
+    .shop1 img {
+        width: 70%;
+        max-width: 180px;
+    }
+
+    .separator {
+        margin: 80px auto;
+    }
+
+    .block4 {
+        margin-top: 60px;
+        padding: 20px;
+    }
+
+    video {
+        min-height: 250px;
+    }
+
+    #map-container {
+        padding: 40px 20px;
+    }
+
+    #map {
+        height: 400px;
+    }
+
+    .destinations-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-book, .btn-map {
+        text-align: center;
+        width: 100%;
+    }
+
+    .price-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .booking-modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+    }
+
+    #tourists-list {
+        min-width: auto;
+    }
+
+    .inputs-row {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    .title1 {
+        white-space: normal;
+        font-size: 24px;
+    }
+}
+
+/* --- АДАПТИВ 390px --- */
+@media (max-width: 390px) {
+    :root {
+        --fs-h1: 24px;
+        --fs-h2: 18px;
+        --fs-h3: 18px;
+        --fs-body: 12px;
+        --fs-small: 10px;
+    }
+
+    body {
+        padding-top: 120px;
+    }
+
+    header {
+        padding: 12px;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    ul {
+        gap: 16px;
+    }
+
+    li a {
+        font-size: 11px;
+    }
+
+    .pattern {
+        min-height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .name1 {
+        font-size: 18px;
+        margin-top: 65px;
+        padding: 0 15px;
+    }
+
+    .text1 {
+        font-size: 11px;
+        padding: 0 15px;
+        margin-top: 8px;
+    }
+
+    .filter {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .filter-form {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .filter-input,
+    .filter-select {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .filter-group label {
+        font-size: 11px;
+    }
+
+    .btn1 {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .block2 {
+        margin-top: 550px;
+        padding: 0 15px;
+    }
+
+    .name2 {
+        font-size: 18px;
+    }
+
+    .block2_1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .prime {
+        min-width: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .name3 {
+        font-size: 14px;
+    }
+
+    .text3 {
+        font-size: 11px;
+    }
+
+    .block_gid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .gid1 {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px 20px;
+    }
+
+    .gid1 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gid_name {
+        font-size: 18px;
+        margin: 15px 0 5px 0;
+    }
+
+    .gid_prof {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .reklama1 {
+        width: 100%;
+    }
+
+    .rek_title {
+        font-size: 20px;
+        margin: 20px 20px 0 20px;
+    }
+
+    .rek_text {
+        font-size: 14px;
+        margin: 8px 20px 0 20px;
+    }
+
+    .forma_email form {
+        flex-direction: column;
+        margin: 20px;
+        gap: 10px;
+    }
+
+    .forma_email input,
+    .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .small_text {
+        margin: 15px 20px;
+        font-size: 10px;
+    }
+
+    .rek_ssilki {
+        gap: 10px;
+    }
+
+    .rek_block {
+        width: calc(33% - 10px);
+        min-width: 80px;
+    }
+
+    .block_shop {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .shop1 {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .shop1 img {
+        width: 60%;
+        max-width: 120px;
+        padding: 10px;
+    }
+
+    .tovar,
+    .price {
+        font-size: 16px;
+    }
+
+    .button_shop {
+        padding: 10px;
+        font-size: 16px;
+        max-width: 160px;
+    }
+
+    .separator {
+        margin: 40px auto;
+    }
+
+    .block4 {
+        margin-top: 40px;
+        padding: 15px;
+        width: calc(100% - 20px);
+    }
+
+    video {
+        min-height: 180px;
+    }
+
+    #map-container {
+        padding: 30px 15px;
+        margin-top: 20px;
+    }
+
+    #map {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .map-title {
+        font-size: 20px;
+    }
+
+    .destinations-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .content h3 {
+        font-size: 1rem;
+    }
+
+    .desc {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .booking-modal-content {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .btn-add, .btn-pay, .btn-book-start, .close-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .total-section {
+        font-size: 16px;
+    }
+
+    .tourist-form {
+        padding: 10px;
+    }
+
+    .inputs-row {
+        grid-template-columns: 1fr;
+    }
+
+    .extra-services label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 15px;
+    }
+
+    .title1 {
+        font-size: 20px;
+    }
+
+    .protect {
+        font-size: 11px;
+    }
+
+    .imagination {
+        width: 100px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .imagination {
+        width: 70px;
+    }
+
+    /* Отключаем некоторые анимации для производительности */
+    .prime:hover {
+        animation: none;
+        transform: scale(1.02);
+    }
+
+    .floating-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .gid1:hover {
+        transform: translateY(-8px);
+    }
+}
+
+/* ПОДВАЛ */
+footer {
+    background-color: var(--black);
+    display: flex;
+    margin-top: 200px;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.protect {
+    color: var(--white);
+    font-family: Medium;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.title1 {
+    font-size: var(--fs-h1);
+    color: var(--white);
+    font-family: ExtraBoldMidGap;
+    white-space: nowrap;
+}
+
+/*МОДАЛЬНЫЕ ОКНА*/
+
+/* Дополнительные стили для модальных окон и формы бронирования */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: Regular;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.booking-modal-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 800px;
+    width: 80%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-x {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-x:hover {
+    color: #333;
+}
+
+.name_bron{
+    color: var(--black);
+}
+
+.btn-add {
+    background: var(--black);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-add:hover {
+    background: var(--pink);
+}
+
+.tourist-form {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.tourist-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.delete-tourist {
+    cursor: pointer;
+    color: var(--pink);
+}
+
+.inputs-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.inputs-row input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.extra-services {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.extra-services p {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.extra-services label {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.booking-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#tourists-list {
+    flex: 2;
+    min-width: 300px;
+}
+
+.payment-info {
+    flex: 1;
+    min-width: 200px;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.payment-info h3 {
+    margin-top: 0;
+}
+
+.total-section {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.btn-pay {
+    background: var(--black);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-pay:hover {
+    background: var(--pink);
+}
+
+.btn-book-start, .close-btn {
+    font-family: Medium;
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.close-btn {
+    background: #999;
+}
+
+.floating-card {
+    cursor: pointer;
+}
